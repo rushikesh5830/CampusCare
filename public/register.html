@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | CampusCare</title>
+<style>
+         .campuscare-logo {
+            width: 160px;
+            height: 67px;
+            object-fit: contain;
+           
+        }
+    </style>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="bg-body-tertiary min-vh-100">
+
+    <nav class="navbar bg-white border-bottom">
+        <div class="container py-2">
+           <a class="navbar-brand" href="/index.html">
+                <img src="/images/campuscare-logo.png"
+                     alt="CampusCare Logo"
+                     class="campuscare-logo">
+            </a>
+
+            <div class="d-flex align-items-center gap-2">
+                <span class="small text-secondary d-none d-sm-inline">
+                    Already registered?
+                </span>
+                <a href="/login.html"
+                   class="btn btn-outline-primary btn-sm px-3">
+                    Sign in
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5">
+        <div class="row justify-content-center align-items-stretch g-0">
+
+            <!-- Welcome Panel -->
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="bg-primary text-white rounded-start-4 p-5 h-100 d-flex flex-column justify-content-between">
+
+                    <div>
+                        <span class="badge bg-white text-primary rounded-pill px-3 py-2 mb-4">
+                            WELCOME TO CAMPUSCARE
+                        </span>
+
+                        <h1 class="display-5 fw-bold mb-4">
+                            Make your voice count.
+                        </h1>
+
+                        <p class="text-white-50 fs-5">
+                            Join CampusCare to report problems and help
+                            improve your college environment.
+                        </p>
+                    </div>
+
+                    <div class="mt-5">
+                        <div class="bg-white bg-opacity-10 rounded-4 p-4 mb-3">
+                            <h5 class="fw-bold">01. Create your account</h5>
+                            <p class="text-white-50 mb-0">
+                                Register with your name and email address.
+                            </p>
+                        </div>
+
+                        <div class="bg-white bg-opacity-10 rounded-4 p-4 mb-3">
+                            <h5 class="fw-bold">02. Report an issue</h5>
+                            <p class="text-white-50 mb-0">
+                                Submit a complaint with the details.
+                            </p>
+                        </div>
+
+                        <div class="bg-white bg-opacity-10 rounded-4 p-4">
+                            <h5 class="fw-bold">03. Track progress</h5>
+                            <p class="text-white-50 mb-0">
+                                Follow your complaint until it is resolved.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="small text-white-50 mt-5 mb-0">
+                        CampusCare · Campus Complaint Management System
+                    </p>
+                </div>
+            </div>
+
+            <!-- Registration Form -->
+            <div class="col-12 col-md-9 col-lg-6">
+                <div class="bg-white border rounded-4 shadow-sm p-4 p-md-5 h-100">
+
+                    <div class="mb-4">
+                        <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-3">
+                            STUDENT REGISTRATION
+                        </span>
+
+                        <h2 class="fw-bold mb-2">Create your account</h2>
+
+                        <p class="text-secondary mb-0">
+                            Enter your details to get started with CampusCare.
+                        </p>
+                    </div>
+
+                   <form id="registerForm">
+    <div class="mb-3">
+        <label for="name" class="form-label">Full Name</label>
+        <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+        >
+    </div>
+
+  <div class="mb-3">
+    <label for="rollNumber" class="form-label">
+        College Roll Number
+    </label>
+    <input
+        type="text"
+        class="form-control"
+        id="rollNumber"
+        name="rollNumber"
+        placeholder="e.g BCA1234567"
+        pattern="[A-Za-z]{3}[0-9]{7}"
+        minlength="10"
+        maxlength="10"
+        title="Enter 3 letters followed by 7 digits."
+        style="text-transform: uppercase";
+        required
+    >
+    <div class="form-text">
+        Format: 3 letters followed by 7 digits (e.g. BCA1234567).
+    </div>
+</div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">College Email</label>
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        >
+    </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            minlength="6"
+            required
+        >
+    </div>
+
+    <div id="message" class="mb-3" role="alert"></div>
+
+    <button type="submit" class="btn btn-primary w-100">
+        Create Account
+    </button>
+</form>
+
+                    <div class="text-center mt-4">
+                        <p class="text-secondary mb-0">
+                            Already have an account?
+                            <a href="/login.html"
+                               class="fw-semibold text-decoration-none">
+                                Sign in
+                            </a>
+                        </p>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <p class="text-secondary small text-center mb-0">
+                        Your account lets you submit complaints and track
+                        their progress from your student dashboard.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="container text-center py-3">
+        <p class="text-secondary small mb-0">
+            &copy; 2026 CampusCare. Built for a better campus.
+        </p>
+    </footer>
+
+    <script src="/js/register.js"></script>
+
+</body>
+</html>

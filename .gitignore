@@ -1,0 +1,20 @@
+
+# Dependencies
+node_modules/
+
+# Environment secrets
+.env
+.env.*
+
+# Private student and complaint data
+data/*.json
+!data/.gitkeep
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
